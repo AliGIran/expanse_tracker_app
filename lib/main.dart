@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
-import 'profile/presentation/pages/profile_page.dart';
+import 'account/presentation/pages/wallets_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MaterialApp(
+      initialRoute: "/",
+      routes: const {
+        //todo:must add list of pages
+      },
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.deepPurple)),
-      home: MyApp()));
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
+      home: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +19,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ProfilePage();
+    return WalletsPage();
   }
 }
 

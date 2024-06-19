@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 class ProfilePage extends StatefulWidget {
-  ProfilePage({super.key});
+  const ProfilePage({super.key});
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();
@@ -55,9 +55,9 @@ class _ProfilePageState extends State<ProfilePage> {
         // ),
       ),
       body: Container(
-        padding: EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.only(top: 20),
         child: ListView(
-          children: const <ListTile> [
+          children: const <ListTile>[
             ListTile(
               leading: Icon(
                 Icons.account_balance_wallet,
@@ -82,7 +82,8 @@ class _ProfilePageState extends State<ProfilePage> {
             ListTile(
               leading: Icon(
                 Icons.logout,
-                color: Colors.red,),
+                color: Colors.red,
+              ),
               title: Text("Logout"),
             )
           ],
@@ -100,7 +101,8 @@ class _ProfilePageState extends State<ProfilePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.man), label: "Profile"),
           BottomNavigationBarItem(icon: Icon(Icons.pie_chart), label: "Budget"),
-          BottomNavigationBarItem(icon: Icon(Icons.wallet), label: "Transaction"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.wallet), label: "Transaction"),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
         ],
       ),
