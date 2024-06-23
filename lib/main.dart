@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'account/presentation/pages/add_new_wallet_page.dart';
+import 'account/presentation/pages/succssful_add_acount_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const AddNewWalletPage();
+    return const SuccessfulAddAccountPage();
   }
 }
 
