@@ -1,6 +1,5 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_img/flutter_img.dart';
 
 class WalletsPage extends StatelessWidget {
   WalletsPage({super.key});
@@ -49,7 +48,7 @@ class WalletsPage extends StatelessWidget {
               itemCount: index,
               itemBuilder: (context, index) => ListTile(
                 // leading: const Icon(Icons.wallet),
-                leading: Icon(Icons.wallet),
+                leading: const Icon(Icons.wallet),
 
                 title: Text("Wallet $index"),
 
