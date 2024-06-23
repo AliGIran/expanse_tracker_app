@@ -1,5 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_img/flutter_img.dart';
 
 class WalletsPage extends StatelessWidget {
   WalletsPage({super.key});
@@ -27,8 +28,8 @@ class WalletsPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-               width: MediaQuery.of(context).size.width * 1,
-               height: MediaQuery.of(context).size.height * .25,
+              width: MediaQuery.of(context).size.width * 1,
+              height: MediaQuery.of(context).size.height * .25,
               decoration: const BoxDecoration(
                   color: Colors.transparent,
                   image: DecorationImage(
@@ -47,8 +48,11 @@ class WalletsPage extends StatelessWidget {
               shrinkWrap: true,
               itemCount: index,
               itemBuilder: (context, index) => ListTile(
-                leading: const Icon(Icons.wallet),
+                // leading: const Icon(Icons.wallet),
+                leading: Icon(Icons.wallet),
+
                 title: Text("Wallet $index"),
+
                 trailing: Text("\$ ${walletBalance[index]} "),
               ),
             )
@@ -62,7 +66,9 @@ class WalletsPage extends StatelessWidget {
             label: const Text(
               "Add new wallet",
             ),
-            onPressed: () {}),
+            onPressed: () {
+              //todo: add navigation to "AddNewWalletPage" page by clicking the button
+            }),
       ),
     );
   }

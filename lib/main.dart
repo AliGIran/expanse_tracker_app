@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'account/presentation/pages/add_new_wallet_page.dart';
 import 'account/presentation/pages/wallets_page.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WalletsPage();
+    return AddNewWalletPage();
   }
 }
 
