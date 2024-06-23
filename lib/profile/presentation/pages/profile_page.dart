@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -57,34 +59,47 @@ class _ProfilePageState extends State<ProfilePage> {
       body: Container(
         padding: const EdgeInsets.only(top: 20),
         child: ListView(
-          children: const <ListTile>[
+          children: <ListTile>[
             ListTile(
-              leading: Icon(
-                Icons.account_balance_wallet,
+              leading: IconButton.filledTonal(
+                icon: const Icon(Icons.account_balance_wallet),
                 color: Colors.deepPurple,
+                onPressed: () {},
               ),
               title: Text("Account"),
             ),
             ListTile(
-              leading: Icon(
-                Icons.settings,
+              leading: IconButton.filledTonal(
                 color: Colors.deepPurple,
+                onPressed: () {},
+                icon: const Icon(Icons.settings),
               ),
-              title: Text("Setting"),
+              title: const Text("Setting"),
             ),
             ListTile(
-              leading: Icon(
-                Icons.upload,
+              leading: IconButton.filledTonal(
                 color: Colors.deepPurple,
+                onPressed: () {},
+                icon: const Icon(Icons.upload),
               ),
-              title: Text("Export Data"),
+              title: const Text("Export Data"),
             ),
             ListTile(
-              leading: Icon(
-                Icons.logout,
-                color: Colors.red,
+              leading: IconButton.filledTonal(
+                style: ButtonStyle(
+                    iconColor: WidgetStateProperty.all<Color>(Colors.red),
+                    backgroundColor:
+                        WidgetStateProperty.all<Color>(Colors.red[100]!)
+
+                    // MaterialStateProperty.all(Colors.red)
+
+                    ),
+                // splashColor: Colors.redAccent,
+                icon: const Icon(Icons.logout),
+                // color: Colors.red,
+                onPressed: () {},
               ),
-              title: Text("Logout"),
+              title: const Text("Logout"),
             )
           ],
         ),
