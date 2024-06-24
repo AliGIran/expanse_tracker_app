@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 
 class ProfilePage extends StatefulWidget {
-  ProfilePage({super.key});
+  const ProfilePage({super.key});
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();
@@ -55,35 +57,49 @@ class _ProfilePageState extends State<ProfilePage> {
         // ),
       ),
       body: Container(
-        padding: EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.only(top: 20),
         child: ListView(
-          children: const <ListTile> [
+          children: <ListTile>[
             ListTile(
-              leading: Icon(
-                Icons.account_balance_wallet,
+              leading: IconButton.filledTonal(
+                icon: const Icon(Icons.account_balance_wallet),
                 color: Colors.deepPurple,
+                onPressed: () {},
               ),
               title: Text("Account"),
             ),
             ListTile(
-              leading: Icon(
-                Icons.settings,
+              leading: IconButton.filledTonal(
                 color: Colors.deepPurple,
+                onPressed: () {},
+                icon: const Icon(Icons.settings),
               ),
-              title: Text("Setting"),
+              title: const Text("Setting"),
             ),
             ListTile(
-              leading: Icon(
-                Icons.upload,
+              leading: IconButton.filledTonal(
                 color: Colors.deepPurple,
+                onPressed: () {},
+                icon: const Icon(Icons.upload),
               ),
-              title: Text("Export Data"),
+              title: const Text("Export Data"),
             ),
             ListTile(
-              leading: Icon(
-                Icons.logout,
-                color: Colors.red,),
-              title: Text("Logout"),
+              leading: IconButton.filledTonal(
+                style: ButtonStyle(
+                    iconColor: WidgetStateProperty.all<Color>(Colors.red),
+                    backgroundColor:
+                        WidgetStateProperty.all<Color>(Colors.red[100]!)
+
+                    // MaterialStateProperty.all(Colors.red)
+
+                    ),
+                // splashColor: Colors.redAccent,
+                icon: const Icon(Icons.logout),
+                // color: Colors.red,
+                onPressed: () {},
+              ),
+              title: const Text("Logout"),
             )
           ],
         ),
@@ -100,7 +116,8 @@ class _ProfilePageState extends State<ProfilePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.man), label: "Profile"),
           BottomNavigationBarItem(icon: Icon(Icons.pie_chart), label: "Budget"),
-          BottomNavigationBarItem(icon: Icon(Icons.wallet), label: "Transaction"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.wallet), label: "Transaction"),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
         ],
       ),
