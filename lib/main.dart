@@ -1,13 +1,19 @@
+import 'package:expense_tracker_app/profile/presentation/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
-import 'profile/presentation/pages/profile_page.dart';
+import 'account/presentation/pages/succssful_add_acount_page.dart';
+import 'login/presentation/pages/login_home_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MaterialApp(
+      initialRoute: "/",
+      routes: const {
+        //todo:must add list of pages
+      },
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.deepPurple)),
-      home: MyApp()));
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
+      home: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +21,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ProfilePage();
+    return LoginHomePage();
   }
 }
 
