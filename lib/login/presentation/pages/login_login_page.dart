@@ -62,6 +62,7 @@ class _LoginLoginPageState extends State<LoginLoginPage> {
               ),
 
               const Gap(15),
+
               RichText(
                 text: const TextSpan(
                     text: 'Don’t have an account yet? ',
