@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'login/presentation/pages/login_home_page.dart';
-import 'login/presentation/pages/login_sign_up_page.dart';
+import 'login/presentation/pages/login_reset_password_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const LoginEmailSentPage();
+    return const LoginResetPasswordPage();
   }
 }
 
