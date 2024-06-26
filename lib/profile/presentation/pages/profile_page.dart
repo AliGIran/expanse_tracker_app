@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -66,7 +64,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: Colors.deepPurple,
                 onPressed: () {},
               ),
-              title: Text("Account"),
+              title: const Text("Account"),
             ),
             ListTile(
               leading: IconButton.filledTonal(
