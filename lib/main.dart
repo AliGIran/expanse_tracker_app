@@ -1,8 +1,7 @@
-import 'package:expense_tracker_app/profile/presentation/pages/profile_page.dart';
-import 'package:expense_tracker_app/setting/presentation/pages/setting_theme_page.dart';
 import 'package:flutter/material.dart';
+import 'export_data/presentation/pages/export_completed_page.dart';
 
-import 'draft.dart';
+import 'export_data/presentation/pages/export_data_home_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ProfilePage();
+    return const ExportCompletedPage();
   }
 }
 
