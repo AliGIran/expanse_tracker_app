@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 class LoginForgotPasswordPage extends StatelessWidget {
   LoginForgotPasswordPage({super.key});
 
-  TextEditingController emailTextEditingController = TextEditingController();
+  final TextEditingController emailTextEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
