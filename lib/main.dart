@@ -1,4 +1,3 @@
-import 'package:expense_tracker_app/setting/presentation/pages/setting_notification_page.dart';
 import 'package:expense_tracker_app/setting/presentation/pages/setting_theme_page.dart';
 import 'package:flutter/material.dart';
 
