@@ -1,6 +1,8 @@
 import 'package:expense_tracker_app/setting/presentation/pages/setting_theme_page.dart';
 import 'package:flutter/material.dart';
 
+import 'draft.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MaterialApp(
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SettingThemePage();
+    return const Draft();
   }
 }
 
