@@ -26,27 +26,21 @@ class _LoginResetPasswordPageState extends State<LoginResetPasswordPage> {
         child: Center(
           child: Column(
             children: [
-
               Gap(MediaQuery.of(context).size.height * 0.05),
-
               TextField(
                 controller: newPasswordTextEditingController,
                 decoration: const InputDecoration(
                     labelText: "New Password",
                     hintText: "Enter yore new password here"),
               ),
-
               Gap(MediaQuery.of(context).size.height * 0.05),
-
               TextField(
                 controller: newPasswordTextEditingController2,
                 decoration: const InputDecoration(
                     labelText: "Retype new password",
                     hintText: "Retype yore password here"),
               ),
-
               Gap(MediaQuery.of(context).size.height * 0.06),
-
               SizedBox(
                 width: MediaQuery.of(context).size.width * .9,
                 child: FilledButton(
