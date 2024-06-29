@@ -1,5 +1,4 @@
-import 'package:expense_tracker_app/setting/presentation/pages/setting_language.dart';
-import 'package:expense_tracker_app/setting/presentation/pages/setting_security_page.dart';
+import 'package:expense_tracker_app/setting/presentation/pages/setting_notification_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SettingSecurity();
+    return const SettingNotificationPage();
   }
 }
 
