@@ -1,3 +1,4 @@
+import 'package:expense_tracker_app/profile/presentation/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
 import 'login/presentation/pages/login_reset_password_page.dart';
