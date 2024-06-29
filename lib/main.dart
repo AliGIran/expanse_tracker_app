@@ -1,7 +1,5 @@
-import 'package:expense_tracker_app/profile/presentation/pages/profile_page.dart';
+import 'package:expense_tracker_app/setting/presentation/pages/setting_home_page.dart';
 import 'package:flutter/material.dart';
-
-import 'login/presentation/pages/login_reset_password_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +18,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const LoginResetPasswordPage();
+    return const SettingHomePage();
   }
 }
 
