@@ -83,6 +83,7 @@ class _ProfilePageState extends State<ProfilePage> {
               title: const Text("Export Data"),
             ),
             ListTile(
+              onTap: () => showModalSheet(context),
               leading: IconButton.filledTonal(
                 style: ButtonStyle(
                     iconColor: WidgetStateProperty.all<Color>(Colors.red),
@@ -125,4 +126,49 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
     );
   }
+}
+
+showModalSheet(BuildContext context) {
+  return showModalBottomSheet<void>(
+    showDragHandle: true,
+    context: context,
+    builder: (context) {
+      return SizedBox(
+        height: MediaQuery.of(context).size.height * 0.25,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                "Logout?",
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
+              const Text(
+                "Are you sure do you wanna logout?",
+                style: TextStyle(color: Colors.grey),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.only(left: 8, right: 16),
+                      child: FilledButton.tonal(
+                          onPressed: () {}, child: const Text("No")),
+                    ),
+                  ),
+                  Expanded(
+                      child: Container(
+                    margin: const EdgeInsets.only(left: 16, right: 8),
+                    child: FilledButton(
+                        onPressed: () {}, child: const Text("Yes")),
+                  )),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
 }
