@@ -69,10 +69,14 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/images/BGwallets_balance_background.png
-    - assets/images/BGwallets_balance_background.jpg
     - assets/icons/gallery.jpg
     - assets/icons/gallery.png
     - assets/icons/gallery.svg
+    - assets/images/ExportData.png
+    - assets/images/GainTotalControlOfYourMoney.png
+    - assets/images/KnowWhereYourMoneyGoes.png
+    - assets/images/PlanningAhead.png
+    - assets/images/YourEmailIsOnTheWay.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
