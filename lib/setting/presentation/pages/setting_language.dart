@@ -15,18 +15,18 @@ class SettingLanguage extends StatelessWidget {
         physics: const AlwaysScrollableScrollPhysics(),
         child: Column(
           children: [
-            settingListTile(context, "English (EN)", true),
-            settingListTile(context, "Indonesian (ID)", false),
-            settingListTile(context, "Arabic (AR)", false),
-            settingListTile(context, "Chinese (ZH)", false),
-            settingListTile(context, "Dutch (NL)", false),
-            settingListTile(context, "French (FR)", false),
-            settingListTile(context, "German (DE)", false),
-            settingListTile(context, "Italian (IT)", false),
-            settingListTile(context, "Korean (KO)", false),
-            settingListTile(context, "Portuguese (PT)", false),
-            settingListTile(context, "Russian (RU)", false),
-            settingListTile(context, "Spanish (ES)", false),
+            settingLanguageListTile(context, "English (EN)", true),
+            settingLanguageListTile(context, "Indonesian (ID)", false),
+            settingLanguageListTile(context, "Arabic (AR)", false),
+            settingLanguageListTile(context, "Chinese (ZH)", false),
+            settingLanguageListTile(context, "Dutch (NL)", false),
+            settingLanguageListTile(context, "French (FR)", false),
+            settingLanguageListTile(context, "German (DE)", false),
+            settingLanguageListTile(context, "Italian (IT)", false),
+            settingLanguageListTile(context, "Korean (KO)", false),
+            settingLanguageListTile(context, "Portuguese (PT)", false),
+            settingLanguageListTile(context, "Russian (RU)", false),
+            settingLanguageListTile(context, "Spanish (ES)", false),
           ],
         ),
       ),
@@ -34,7 +34,7 @@ class SettingLanguage extends StatelessWidget {
   }
 }
 
-Widget settingListTile(
+Widget settingLanguageListTile(
     BuildContext context, String settingCurrencyListTile, bool status) {
   return ListTile(
       enabled: status,

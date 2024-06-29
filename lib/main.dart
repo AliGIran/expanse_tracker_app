@@ -1,4 +1,5 @@
 import 'package:expense_tracker_app/setting/presentation/pages/setting_notification_page.dart';
+import 'package:expense_tracker_app/setting/presentation/pages/setting_theme_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SettingNotificationPage();
+    return const SettingThemePage();
   }
 }
 

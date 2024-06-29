@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SettingSecurity extends StatelessWidget {
-  const SettingSecurity({super.key});
+class SettingSecurityPage extends StatelessWidget {
+  const SettingSecurityPage({super.key});
 
   @override
   Widget build(BuildContext context) {
