@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'export_data/presentation/pages/export_completed_page.dart';
 
 import 'export_data/presentation/pages/export_data_home_page.dart';
 
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ExportCompletedPage();
+    return const ExportDataHomePage();
   }
 }
 
