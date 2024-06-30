@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'export_data/presentation/pages/export_data_home_page.dart';
+import 'expense/presentation/pages/new_expense_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ExportDataHomePage();
+    return NewExpensePage();
   }
 }
 
