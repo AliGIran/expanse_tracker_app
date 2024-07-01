@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'expense/presentation/pages/new_expense_page.dart';
+import 'income/presentation/pages/new_income_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NewExpensePage();
+    return NewIncomePage();
   }
 }
 
