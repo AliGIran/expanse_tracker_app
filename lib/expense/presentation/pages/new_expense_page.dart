@@ -51,9 +51,10 @@ class NewExpensePage extends StatelessWidget {
           ),
         ),
         DraggableScrollableSheet(
+          controller: DraggableScrollableController(),
           initialChildSize: 0.5,
           minChildSize: 0.5,
-          maxChildSize: 0.8,
+          maxChildSize: 0.6,
           builder: (context, scrollController) => Container(
             padding: const EdgeInsets.all(20),
             decoration: const BoxDecoration(
@@ -68,61 +69,73 @@ class NewExpensePage extends StatelessWidget {
                       spreadRadius: 5,
                       offset: Offset(0, 0))
                 ]),
-            child: Column(
-              children: [
-                DropdownButtonFormField<String>(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(15)))),
-                  isExpanded: true,
-                  hint: const Text("Category"),
-                  // value: "CSV",
-                  items: <String>['CSV', 'XML', 'PDF'].map((String item) {
-                    return DropdownMenuItem<String>(
-                      value: item,
-                      child: Text(item),
-                    );
-                  }).toList(),
-                  onChanged: (value) {
-                    value = value;
-                  },
-                ),
-                const Gap(16),
-                TextField(
-                  controller: descriptionTextEditingController,
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(15))),
-                      hintText: "Description"),
-                ),
-                const Gap(16),
-                DropdownButtonFormField<String>(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(15)))),
-                  isExpanded: true,
-                  hint: const Text("Wallet"),
-                  // value: "CSV",
-                  items: <String>['CSV', 'XML', 'PDF'].map((String item) {
-                    return DropdownMenuItem<String>(
-                      value: item,
-                      child: Text(item),
-                    );
-                  }).toList(),
-                  onChanged: (value) {
-                    value = value;
-                  },
-                ),
-                const Gap(16),
-                SizedBox(
-                  width: double.infinity,
-                  child: OutlinedButton.icon(
-                    onPressed: () => showModalSheet(context),
-                    label: const Text("Attachment"),
-                    icon: const Icon(Icons.attach_file),
+            child: SingleChildScrollView(
+              controller: scrollController,
+              child: Column(
+                children: [
+                  DropdownButtonFormField<String>(
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15)))),
+                    isExpanded: true,
+                    hint: const Text("Category"),
+                    // value: "CSV",
+                    items: <String>['CSV', 'XML', 'PDF'].map((String item) {
+                      return DropdownMenuItem<String>(
+                        value: item,
+                        child: Text(item),
+                      );
+                    }).toList(),
+                    onChanged: (value) {
+                      value = value;
+                    },
                   ),
-                )
-              ],
+                  const Gap(16),
+                  TextField(
+                    controller: descriptionTextEditingController,
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15))),
+                        hintText: "Description"),
+                  ),
+                  const Gap(16),
+                  DropdownButtonFormField<String>(
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15)))),
+                    isExpanded: true,
+                    hint: const Text("Wallet"),
+                    // value: "CSV",
+                    items: <String>['CSV', 'XML', 'PDF'].map((String item) {
+                      return DropdownMenuItem<String>(
+                        value: item,
+                        child: Text(item),
+                      );
+                    }).toList(),
+                    onChanged: (value) {
+                      value = value;
+                    },
+                  ),
+                  const Gap(16),
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton.icon(
+                      onPressed: () => showModalSheet(context),
+                      label: const Text("Attachment"),
+                      icon: const Icon(Icons.attach_file),
+                    ),
+                  ),
+                  const Gap(16),
+                  SizedBox(
+                      width: double.infinity,
+                      child: FilledButton(
+                          onPressed: () => successMessage(context),
+                          child: const Text("Continue")))
+                ],
+              ),
             ),
           ),
         )
@@ -214,6 +227,24 @@ showModalSheet(BuildContext context) {
             ],
           ),
         ),
+      );
+    },
+  );
+}
+
+Future<void> successMessage(BuildContext context) {
+  return showDialog<void>(
+    context: context,
+    // barrierDismissible: false, // user must tap button!
+
+    builder: (context) {
+      return AlertDialog(
+        title: Icon(
+          Icons.check_circle_rounded,
+          color: Colors.deepPurple,
+          size: MediaQuery.of(context).size.width * 0.15,
+        ),
+        content: Text("Transaction has been successfully added"),
       );
     },
   );
