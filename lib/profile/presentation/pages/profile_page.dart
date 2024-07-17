@@ -22,9 +22,9 @@ class _ProfilePageState extends State<ProfilePage> {
               backgroundColor: Colors.deepPurple,
               radius: 45,
               child: CircleAvatar(
-                radius: 43,
+                radius: 42,
                 backgroundImage:
-                    NetworkImage('https://via.placeholder.com/150'),
+                    AssetImage("assets/images/avatar.jpg"),
               ),
             ),
             const Gap(10),

@@ -195,6 +195,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  iconable_avatar:
+    dependency: "direct main"
+    description:
+      name: iconable_avatar
+      sha256: "1c6dab36a5ebdeabb3b20f6d61bd696cfffa73694ba713a392264e724d607894"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.4"
   image:
     dependency: "direct main"
     description:
