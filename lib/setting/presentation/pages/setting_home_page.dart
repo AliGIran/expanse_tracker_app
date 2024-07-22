@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/data/page_routes.dart';
+import '../widgets/setting_home_page_widgets.dart';
+
 class SettingHomePage extends StatelessWidget {
   const SettingHomePage({super.key});
 
@@ -11,57 +14,34 @@ class SettingHomePage extends StatelessWidget {
         title: const Text("Settings"),
         centerTitle: true,
       ),
-      body: Column(
+      body: const Column(
         children: [
           // Currency
-          settingListTileItem(context, "Currency", "USD"),
+          SettingHomePageListTile(itemTitle: "Currency", secondTitle: "USD",routeName: settingCurrencyPage,),
 
           //Language
-          settingListTileItem(context, "Language", "English"),
+          SettingHomePageListTile(
+              itemTitle: "Language", secondTitle: "English",routeName: settingLanguagePage,),
 
           //Theme
-          settingListTileItem(context, "Theme", "Dark"),
+          SettingHomePageListTile(itemTitle: "Theme", secondTitle: "Dark",routeName: settingThemePage),
 
           //Security
-          settingListTileItem(context, "Security", "Fingerprint"),
+          SettingHomePageListTile(
+              itemTitle: "Security", secondTitle: "Fingerprint",routeName: settingSecurityPage),
 
           //Notification
-          settingListTileItem(context, "Notification", ""),
+          SettingHomePageListTile(itemTitle: "Notification", secondTitle: "",routeName: settingNotificationPage),
 
-          const ListTile(),
-
+          ListTile(),
 
           //About
-          settingListTileItem(context, "About", ""),
+          SettingHomePageListTile(itemTitle: "About", secondTitle: ""),
 
           //Help
-          settingListTileItem(context, "Help", ""),
+          SettingHomePageListTile(itemTitle: "Help", secondTitle: ""),
         ],
       ),
     );
   }
-}
-
-Widget settingListTileItem(
-    BuildContext context, String itemTitle, String secondTitle) {
-  return ListTile(
-    title: Text(itemTitle),
-    trailing: SizedBox(
-      width: MediaQuery.of(context).size.width * 0.3,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Text(
-            secondTitle,
-            style: const TextStyle(color: Colors.grey),
-          ),
-          const Icon(
-            Icons.arrow_forward_ios_rounded,
-            color: Colors.purple,
-          ),
-        ],
-      ),
-    ),
-    onTap: () {},
-  );
 }

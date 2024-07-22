@@ -1,27 +1,19 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/setting_currency_page_widgets.dart';
+
 class SettingCurrencyPage extends StatelessWidget {
   const SettingCurrencyPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: const BackButton(),
-        title: const Text("Currency"),
-        centerTitle: true,
-      ),
-      body: Column(
-        children: [
-          currencyListTile(context, "United States (USD)"),
-          currencyListTile(context, "Indonesia (IDR)"),
-          currencyListTile(context, "Japan (JPY)"),
-          currencyListTile(context, "Russia (RUB)"),
-          currencyListTile(context, "Germany (EUR)"),
-          currencyListTile(context, "Korea (WON)"),
-        ],
-      ),
-    );
+        appBar: AppBar(
+          leading: const BackButton(),
+          title: const Text("Currency"),
+          centerTitle: true,
+        ),
+        body: CurrencyList());
   }
 }
 
