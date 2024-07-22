@@ -32,7 +32,8 @@ class SettingHomePageListTile extends StatelessWidget {
         ),
       ),
       onTap: () {
-        if (routeName != "") {
+
+        if(routeName!=""){
           Navigator.pushNamed(context, routeName);
         }
       },

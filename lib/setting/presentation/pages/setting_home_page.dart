@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/data/page_routes.dart';
+import '../widgets/setting_currency_page_widgets.dart';
 import '../widgets/setting_home_page_widgets.dart';
+import '../widgets/setting_language_page_widgets.dart';
 
 class SettingHomePage extends StatelessWidget {
   const SettingHomePage({super.key});
@@ -14,24 +16,39 @@ class SettingHomePage extends StatelessWidget {
         title: const Text("Settings"),
         centerTitle: true,
       ),
-      body: const Column(
+      body: Column(
         children: [
           // Currency
-          SettingHomePageListTile(itemTitle: "Currency", secondTitle: "USD",routeName: settingCurrencyPage,),
+          SettingHomePageListTile(
+            itemTitle: "Currency",
+            secondTitle: getFirstCurrencyNameValue() ?? "",
+            routeName: settingCurrencyPage,
+          ),
 
           //Language
           SettingHomePageListTile(
-              itemTitle: "Language", secondTitle: "English",routeName: settingLanguagePage,),
+            itemTitle: "Language",
+            secondTitle: getFirstLanguageNameValue()??"",
+            routeName: settingLanguagePage,
+          ),
 
           //Theme
-          SettingHomePageListTile(itemTitle: "Theme", secondTitle: "Dark",routeName: settingThemePage),
+          SettingHomePageListTile(
+              itemTitle: "Theme",
+              secondTitle: "Dark",
+              routeName: settingThemePage),
 
           //Security
           SettingHomePageListTile(
-              itemTitle: "Security", secondTitle: "Fingerprint",routeName: settingSecurityPage),
+              itemTitle: "Security",
+              secondTitle: "Fingerprint",
+              routeName: settingSecurityPage),
 
           //Notification
-          SettingHomePageListTile(itemTitle: "Notification", secondTitle: "",routeName: settingNotificationPage),
+          SettingHomePageListTile(
+              itemTitle: "Notification",
+              secondTitle: "",
+              routeName: settingNotificationPage),
 
           ListTile(),
 

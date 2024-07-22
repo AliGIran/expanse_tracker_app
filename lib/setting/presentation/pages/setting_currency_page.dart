@@ -13,7 +13,7 @@ class SettingCurrencyPage extends StatelessWidget {
           title: const Text("Currency"),
           centerTitle: true,
         ),
-        body: CurrencyList());
+        body: const CurrencyList());
   }
 }
 

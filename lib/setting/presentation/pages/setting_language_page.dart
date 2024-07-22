@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../data/data_sources/variables.dart';
+import '../widgets/setting_language_page_widgets.dart';
+
 class SettingLanguagePage extends StatelessWidget {
   const SettingLanguagePage({super.key});
 
@@ -11,38 +14,12 @@ class SettingLanguagePage extends StatelessWidget {
         title: const Text("Language"),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        child: Column(
-          children: [
-            settingLanguageListTile(context, "English (EN)", true),
-            settingLanguageListTile(context, "Indonesian (ID)", false),
-            settingLanguageListTile(context, "Arabic (AR)", false),
-            settingLanguageListTile(context, "Chinese (ZH)", false),
-            settingLanguageListTile(context, "Dutch (NL)", false),
-            settingLanguageListTile(context, "French (FR)", false),
-            settingLanguageListTile(context, "German (DE)", false),
-            settingLanguageListTile(context, "Italian (IT)", false),
-            settingLanguageListTile(context, "Korean (KO)", false),
-            settingLanguageListTile(context, "Portuguese (PT)", false),
-            settingLanguageListTile(context, "Russian (RU)", false),
-            settingLanguageListTile(context, "Spanish (ES)", false),
-          ],
-        ),
+      body: ListView.builder(
+        itemCount: languageNameList.length,
+        itemBuilder: (context, index) => LanguageList(
+            settingCurrencyListTile: languageNameList[index][0],
+            status: languageNameList[index][2]),
       ),
     );
   }
-}
-
-Widget settingLanguageListTile(
-    BuildContext context, String settingCurrencyListTile, bool status) {
-  return ListTile(
-      enabled: status,
-      title: Text(settingCurrencyListTile),
-      trailing: status
-          ? const Icon(
-              Icons.check_circle,
-              color: Colors.deepPurple,
-            )
-          : null);
 }
