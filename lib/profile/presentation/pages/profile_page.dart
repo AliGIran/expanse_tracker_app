@@ -31,7 +31,7 @@ class _ProfilePageState extends State<ProfilePage> {
         child: ListView(
           children: <ListTile>[
             profilePageAccountListTile(),
-            profilePageSettingListTile(),
+            profilePageSettingListTile(context),
             profilePageExportDataListTile(),
             profilePageLogoutListTile(context),
           ],

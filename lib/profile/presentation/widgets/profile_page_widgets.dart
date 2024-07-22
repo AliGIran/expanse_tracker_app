@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/data/page_routes.dart';
+
 class ProfilePageAvatar extends StatelessWidget {
   const ProfilePageAvatar({super.key});
 
@@ -63,18 +65,21 @@ ListTile profilePageAccountListTile() {
 }
 
 //setting button
-ListTile profilePageSettingListTile() {
+ListTile profilePageSettingListTile(BuildContext context) {
   return ListTile(
+    onTap: () => Navigator.pushNamed(context, settingHomePage),
     leading: IconButton.filledTonal(
       color: Colors.deepPurple,
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, settingHomePage);
+      },
       icon: const Icon(Icons.settings),
     ),
     title: const Text("Setting"),
   );
 }
 
-//setting button
+//export button
 ListTile profilePageExportDataListTile() {
   return ListTile(
     leading: IconButton.filledTonal(
@@ -163,15 +168,14 @@ Widget logOutYesButton() {
   ));
 }
 
-
 class ProfilePageAddNewUserFAB extends StatelessWidget {
   const ProfilePageAddNewUserFAB({super.key});
 
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-    child: const Icon(Icons.add),
-    onPressed: () {},
+      child: const Icon(Icons.add),
+      onPressed: () {},
     );
   }
 }
