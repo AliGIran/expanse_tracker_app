@@ -32,7 +32,7 @@ class _ProfilePageState extends State<ProfilePage> {
           children: <ListTile>[
             profilePageAccountListTile(),
             profilePageSettingListTile(context),
-            profilePageExportDataListTile(),
+            profilePageExportDataListTile(context),
             profilePageLogoutListTile(context),
           ],
         ),

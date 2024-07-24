@@ -80,14 +80,17 @@ ListTile profilePageSettingListTile(BuildContext context) {
 }
 
 //export button
-ListTile profilePageExportDataListTile() {
+ListTile profilePageExportDataListTile(BuildContext context) {
   return ListTile(
     leading: IconButton.filledTonal(
       color: Colors.deepPurple,
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, exportDataHomePage);
+      },
       icon: const Icon(Icons.upload),
     ),
     title: const Text("Export Data"),
+    onTap: () => Navigator.pushNamed(context, exportDataHomePage),
   );
 }
 
