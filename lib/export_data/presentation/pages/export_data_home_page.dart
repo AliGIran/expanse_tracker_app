@@ -16,7 +16,7 @@ class ExportDataHomePage extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 46, horizontal: 16),
-        child:  Column(
+        child:  const Column(
           children: <Widget>[
 
             //to choose income or expense data to export
